@@ -1,5 +1,5 @@
 package OtherClasses;
-import static java.lang.Math.*;
+
 import Interface.*;
 public class AdvancedCalculator implements InterfaceAdvanced{
 	
