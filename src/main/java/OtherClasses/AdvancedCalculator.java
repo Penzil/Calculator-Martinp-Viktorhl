@@ -1,8 +1,17 @@
+/**
+ * auther: Martin Palman
+ * auther: Viktor Hamnholm Lofgren
+ * version: 1.0
+ */
 package OtherClasses;
-
+/**
+ * Here i import 
+ */
 import Interface.*;
 public class AdvancedCalculator implements InterfaceAdvanced{
-	
+/**
+ * Here is when my attribute myABS gets the funktion of abs and myPI gets the funktion of pi m.m 
+ */
 	public double myABS(double value){
 		return Math.abs(value);
 	}
