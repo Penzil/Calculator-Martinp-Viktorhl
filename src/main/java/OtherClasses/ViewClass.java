@@ -1,6 +1,13 @@
+/**
+ * auther: Martin Palman
+ * auther: Viktor Hamnholm Lofgren
+ * version: 1.0
+ */
 package OtherClasses;
 
-
+/**
+ * Har importerar vi 
+ */
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -22,7 +29,10 @@ public class ViewClass implements ActionListener {
 
 	private double firstNumber = 0.0;
 	private double secondNumber = 0.0;
-
+	/**
+	 * 
+	 * Getters och Setters
+	 */
 	public double getFirstNumber() {
 		return firstNumber;
 	}
@@ -38,7 +48,9 @@ public class ViewClass implements ActionListener {
 	public void setSecondNumber(double secondNumber) {
 		this.secondNumber = secondNumber;
 	}
-
+	/**
+	 *Har doper knapparna
+	 */
 	private JButton btnAdd = new JButton("+");
 	private JButton btnSubtract = new JButton("-");
 	private JButton btnMultiply = new JButton("*");

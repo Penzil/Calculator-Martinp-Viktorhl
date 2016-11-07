@@ -1,8 +1,17 @@
+/**
+ * auther: Martin Palman
+ * auther: Viktor Hamnholm Lofgren
+ * version: 1.0
+ */
 package OtherClasses;
-
+/**
+ * Har importerar vi 
+ */
 import Interface.*;
 public class AdvancedCalculator implements InterfaceAdvanced{
-	
+/**
+ * Har gor jag sa att min far funktionen min (att ta ut de minsta vardet) och att pi far fram pi vartet m.m 
+ */
 	public double myABS(double value){
 		return Math.abs(value);
 	}

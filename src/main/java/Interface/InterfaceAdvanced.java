@@ -1,7 +1,14 @@
+/**
+ * auther: Martin Palman
+ * auther: Viktor Hamnholm Lofgren
+ * version: 1.0
+ */
 package Interface;
 
 public interface InterfaceAdvanced {
-	
+	/**
+	 * Har listar vi upp alla metoder
+	 */
 	public double myABS(double value);
 	
 	public double myPI();
