@@ -13,61 +13,107 @@ public class AdvancedCalculatorTest {
 	Random random = new Random();
 	double Number1 = 0.0;
 	double Number2 = 0.0;
-	
+	double NegNumber1 = 0.0;
+	double NegNumber2 = 0.0;
+
 	@Test
 	public void testMyAbs() {
-		//assertEquals(10.0, ac.myABS(-10.0),0);
-		//assertEquals(10.0, ac.myABS(+10.0),0);
+
 		for (double d = 0; d < 5; d++) {
 
-			Number1 = random.nextDouble() * 10 - 5;
-			//Number2 = random.nextDouble() * 10 - 5;
-
-			log.info("testting testMyAbs: " + Number1 + " " );
-			assertEquals(Number1, ac.myABS(-Number1),0);
-			//assertEquals((ac.MyABS(Number1)), Math.abs(Number2), 0);
-		}
+			Number1 = random.nextDouble() * 20;
+			log.info("testting testMyAbsPos: " + Number1 + " ");
+			NegNumber1 =random.nextDouble() * -20;
+			log.info("testting testMyAbsNeg: " + NegNumber1 + " ");
 		
+
+			assertEquals(ac.myABS(Number1), Math.abs(Number1), 0);
+			assertEquals(ac.myABS(0), Math.abs(0), 0);
+			assertEquals(ac.myABS(NegNumber1), Math.abs(NegNumber1), 0);
+		
+		}
+
 	}
+
 	@Test
 	public void testMyPI() {
-		assertEquals(3.14159, ac.myPI(),0.00001);
+		assertEquals(3.14159, ac.myPI(), 0.00001);
 	}
+
 	@Test
 	public void testMyMIN() {
-		//assertEquals(10.0, ac.myMIN(10.0, 20.0),0);
+	
 		for (double d = 0; d < 5; d++) {
 
-			Number1 = random.nextDouble() * 10 - 5;
-			Number2 = random.nextDouble() * 10 - 5;
+			Number1 = random.nextDouble() * 20;
+			Number2 = random.nextDouble() * 20;
+			log.info("testting testMyMinPos: " + Number1 + " " + Number2);
 
-			log.info("testting testMyMin: " + Number1 + " " + Number2);
-			assertEquals(10.0, ac.myMIN(10.0, 20.0),0);
+			NegNumber1 =random.nextDouble() * -20;
+			NegNumber2 =random.nextDouble() * -20;
+			log.info("testting testMyMinNeg: " + NegNumber1 + " " + NegNumber2);
+
+			
+			assertEquals((ac.myMIN(Number1, Number2)), Math.min(Number1, Number2), 0);
+			assertEquals((ac.myMIN(0, 0)), Math.min(0, 0), 0);
+			assertEquals((ac.myMIN(NegNumber1, NegNumber2)), Math.min(NegNumber1, NegNumber2), 0);
+
 		}
-		
+
 	}
+
 	@Test
 	public void testMyMAX() {
-		//assertEquals(20.0, ac.myMAX(10.0, 20.0),0);
-		
+
 		for (double d = 0; d < 5; d++) {
 
-			Number1 = random.nextDouble() * 10 - 5;
-			Number2 = random.nextDouble() * 10 - 5;
+			Number1 = random.nextDouble() * 20;
+			Number2 = random.nextDouble() * 20;
+			log.info("testting testMyMaxPos: " + Number1 + " " + Number2);
+			
+			NegNumber1 =random.nextDouble() * -20;
+			NegNumber2 =random.nextDouble() * -20;
+			log.info("testting testMyMaxNeg: " + NegNumber1 + " " + NegNumber2);
+			
+			assertEquals(ac.myMAX(Number1, Number2), Math.max(Number1, Number2), 0);
+			assertEquals(ac.myMAX(0, 0), Math.max(0, 0), 0);
+			assertEquals(ac.myMAX(NegNumber1, NegNumber2), Math.max(NegNumber1, NegNumber2), 0);
 
-			log.info("testting testMyMax: " + Number1 + " " + Number2);
-			assertEquals(20.0, ac.myMAX(10.0, 20.0),0);
 		}
 	}
+
 	@Test
 	public void testMyRound() {
-		assertEquals(3.0, ac.myROUND(3.4),0);
-		assertEquals(4.0, ac.myROUND(3.5),0);
+	
+		for (double d = 0; d < 5; d++) {
+
+			Number1 = random.nextDouble() * 20;
+			log.info("testting testMyRoundPos: " + Number1 + " ");
+
+			NegNumber1 =random.nextDouble() * -20;
+			log.info("testting testMyRoundNeg: " + NegNumber1 + " ");
+			
+			assertEquals(ac.myROUND(Number1), Math.round(Number1), 0);
+			assertEquals(ac.myROUND(0), Math.round(0), 0);
+			assertEquals(ac.myROUND(NegNumber1), Math.round(NegNumber1), 0);
+		}
 	}
+
 	@Test
 	public void testMyFloor() {
-		assertEquals(3.0, ac.myFLOOR(3.91),0);
-		
+
+		for (double d = 0; d < 5; d++) {
+
+			Number1 = random.nextDouble() * 20;
+			log.info("testting testMyFloorPos: " + Number1 + " ");
+
+			NegNumber1 =random.nextDouble() * -20;
+			log.info("testting testMyFloorNeg: " + NegNumber1 + " ");
+			
+			assertEquals(ac.myFLOOR(Number1), Math.floor(Number1), 0);
+			assertEquals(ac.myFLOOR(0), Math.floor(0), 0);
+			assertEquals(ac.myFLOOR(NegNumber1), Math.floor(NegNumber1), 0);
+		}
 	}
 
 }
