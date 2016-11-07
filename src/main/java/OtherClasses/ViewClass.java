@@ -29,6 +29,7 @@ public class ViewClass implements ActionListener {
 
 	private double firstNumber = 0.0;
 	private double secondNumber = 0.0;
+
 	/**
 	 * 
 	 * Getters och Setters
@@ -48,8 +49,9 @@ public class ViewClass implements ActionListener {
 	public void setSecondNumber(double secondNumber) {
 		this.secondNumber = secondNumber;
 	}
+
 	/**
-	 *here we give names to the buttons
+	 * here we give names to the buttons
 	 */
 	private JButton btnAdd = new JButton("+");
 	private JButton btnSubtract = new JButton("-");
@@ -93,9 +95,9 @@ public class ViewClass implements ActionListener {
 		txfSecondNumber.setBounds(116, 58, 108, 20);
 		Calculator.getContentPane().add(txfSecondNumber);
 		txfSecondNumber.setColumns(10);
-/**
- * here we dicide where all the buttons are in the Calculator window
- */
+		/**
+		 * here we dicide where all the buttons are in the Calculator window
+		 */
 		lblFirstNumber.setBounds(10, 30, 96, 14);
 		lblSecondNumber.setBounds(10, 61, 96, 14);
 		lblResult.setBounds(10, 86, 223, 14);
@@ -134,9 +136,10 @@ public class ViewClass implements ActionListener {
 		Calculator.getContentPane().add(btnRound);
 		Calculator.getContentPane().add(btnFloor);
 	}
-/**
- * here i make so my buttons can be touchable
- */
+
+	/**
+	 * here i make so my buttons can be touchable
+	 */
 	public void addActionListeners() {
 		btnAdd.addActionListener(this);
 		btnSubtract.addActionListener(this);
@@ -153,7 +156,7 @@ public class ViewClass implements ActionListener {
 
 	/**
 	 *
-	 *here i connect my methods with buttons
+	 * here i connect my methods with buttons
 	 **/
 	public double firstValue() {
 		double firstNumber = 0.0;
@@ -192,30 +195,30 @@ public class ViewClass implements ActionListener {
 			double result = advancedCalculator.myABS(firstValue());
 			lblResult.setText("Result: " + result);
 		}
-		
+
 		if (e.getSource() == btnPi) {
 			double result = advancedCalculator.myPI();
 			lblResult.setText("Result: " + result);
 		}
-		
+
 		if (e.getSource() == btnMin) {
 			double result = advancedCalculator.myMIN(firstValue(), secondValue());
 			lblResult.setText("Result: " + result);
 		}
-		
+
 		if (e.getSource() == btnMax) {
 			double result = advancedCalculator.myMAX(firstValue(), secondValue());
 			lblResult.setText("Result: " + result);
 		}
-		
+
 		if (e.getSource() == btnRound) {
 			double result = advancedCalculator.myROUND(firstValue());
 			lblResult.setText("Result: " + result);
 		}
-		
+
 		if (e.getSource() == btnFloor) {
 			double result = advancedCalculator.myFLOOR(firstValue());
 			lblResult.setText("Result: " + result);
 		}
-}
+	}
 }

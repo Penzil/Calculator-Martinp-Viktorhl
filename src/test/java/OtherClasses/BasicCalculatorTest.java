@@ -14,7 +14,6 @@ public class BasicCalculatorTest extends TestCase {
 	double Number1 = 0.0;
 	double Number2 = 0.0;
 
-
 	@Test
 	public void testAdd() {
 		for (double d = 0; d < 60; d++) {
@@ -71,7 +70,7 @@ public class BasicCalculatorTest extends TestCase {
 		}
 		log.info("testting testDivide with zero: ");
 		assertEquals(-999999.9999, bc.divide(6.0, 0.0));
-		
+
 	}
 
 }

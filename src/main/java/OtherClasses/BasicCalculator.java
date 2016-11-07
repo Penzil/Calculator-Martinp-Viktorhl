@@ -4,14 +4,17 @@
  * version: 1.0
  */
 package OtherClasses;
+
 /**
  * here i import
  */
 import javax.swing.JOptionPane;
 
 import Interface.InterfaceBasic;
+
 /**
- * Here is when my attribute add gets the funktion of add and plus two values together and subtract minus two values m.m  
+ * Here is when my attribute add gets the funktion of add and plus two values
+ * together and subtract minus two values m.m
  */
 public class BasicCalculator implements InterfaceBasic {
 	public double add(double Number1, double Number2) {
