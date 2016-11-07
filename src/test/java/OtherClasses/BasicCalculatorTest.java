@@ -17,7 +17,7 @@ public class BasicCalculatorTest extends TestCase {
 
 	@Test
 	public void testAdd() {
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 10 - 5;
 			Number2 = random.nextDouble() * 10 - 5;
@@ -31,7 +31,7 @@ public class BasicCalculatorTest extends TestCase {
 
 	@Test
 	public void testSubtract() {
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 			Number1 = random.nextDouble() * 10 - 5;
 			Number2 = random.nextDouble() * 10 - 5;
 
@@ -46,7 +46,7 @@ public class BasicCalculatorTest extends TestCase {
 	@Test
 	public void testMultiply() {
 
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 10 - 5;
 			Number2 = random.nextDouble() * 10 - 5;
@@ -61,7 +61,7 @@ public class BasicCalculatorTest extends TestCase {
 	@Test
 	public void testDivide() {
 
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 10 - 5;
 			Number2 = random.nextDouble() * 10 - 5;

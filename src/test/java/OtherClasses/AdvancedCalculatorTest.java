@@ -19,7 +19,7 @@ public class AdvancedCalculatorTest {
 	@Test
 	public void testMyAbs() {
 
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 20;
 			log.info("testting testMyAbsPos: " + Number1 + " ");
@@ -43,7 +43,7 @@ public class AdvancedCalculatorTest {
 	@Test
 	public void testMyMIN() {
 	
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 20;
 			Number2 = random.nextDouble() * 20;
@@ -65,7 +65,7 @@ public class AdvancedCalculatorTest {
 	@Test
 	public void testMyMAX() {
 
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 20;
 			Number2 = random.nextDouble() * 20;
@@ -85,7 +85,7 @@ public class AdvancedCalculatorTest {
 	@Test
 	public void testMyRound() {
 	
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 20;
 			log.info("testting testMyRoundPos: " + Number1 + " ");
@@ -102,7 +102,7 @@ public class AdvancedCalculatorTest {
 	@Test
 	public void testMyFloor() {
 
-		for (double d = 0; d < 5; d++) {
+		for (double d = 0; d < 60; d++) {
 
 			Number1 = random.nextDouble() * 20;
 			log.info("testting testMyFloorPos: " + Number1 + " ");
