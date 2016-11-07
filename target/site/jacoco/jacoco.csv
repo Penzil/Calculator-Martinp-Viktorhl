@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Calculator-Martinp-Viktorhl,Main,Main,0,8,0,0,0,3,0,2,0,2
+Calculator-Martinp-Viktorhl,OtherClasses,AdvancedCalculator,0,23,0,0,0,7,0,7,0,7
+Calculator-Martinp-Viktorhl,OtherClasses,BasicCalculator,0,34,0,2,0,9,0,6,0,5
+Calculator-Martinp-Viktorhl,OtherClasses,ViewClass,265,422,20,0,43,77,17,4,7,4
