@@ -5,12 +5,12 @@
  */
 package OtherClasses;
 /**
- * Har importerar vi 
+ * Here i import 
  */
 import Interface.*;
 public class AdvancedCalculator implements InterfaceAdvanced{
 /**
- * Har gor jag sa att min far funktionen min (att ta ut de minsta vardet) och att pi far fram pi vartet m.m 
+ * Here is when my attribute myABS gets the funktion of abs and myPI gets the funktion of pi m.m 
  */
 	public double myABS(double value){
 		return Math.abs(value);

@@ -5,13 +5,13 @@
  */
 package OtherClasses;
 /**
- * Har importerar vi 
+ * here i import
  */
 import javax.swing.JOptionPane;
 
 import Interface.InterfaceBasic;
 /**
- * Har gor jag sa att add far funktionen add (att plusa ihop tva tal) och att subtract kan kora minus 
+ * Here is when my attribute add gets the funktion of add and plus two values together and subtract minus two values m.m  
  */
 public class BasicCalculator implements InterfaceBasic {
 	public double add(double Number1, double Number2) {

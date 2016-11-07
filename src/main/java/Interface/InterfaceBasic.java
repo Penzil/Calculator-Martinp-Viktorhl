@@ -7,7 +7,7 @@ package Interface;
 
 public interface InterfaceBasic {
 	/**
-	 * Har listar vi upp alla metoder
+	 * here i list up the methods
 	 */
 	public double add(double Number1, double Number2);
 

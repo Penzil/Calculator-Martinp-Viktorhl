@@ -6,7 +6,7 @@
 package OtherClasses;
 
 /**
- * Har importerar vi 
+ * here i import
  */
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -49,7 +49,7 @@ public class ViewClass implements ActionListener {
 		this.secondNumber = secondNumber;
 	}
 	/**
-	 *Har doper knapparna
+	 *here we give names to the buttons
 	 */
 	private JButton btnAdd = new JButton("+");
 	private JButton btnSubtract = new JButton("-");
@@ -93,7 +93,9 @@ public class ViewClass implements ActionListener {
 		txfSecondNumber.setBounds(116, 58, 108, 20);
 		Calculator.getContentPane().add(txfSecondNumber);
 		txfSecondNumber.setColumns(10);
-
+/**
+ * here we dicide where all the buttons are in the Calculator window
+ */
 		lblFirstNumber.setBounds(10, 30, 96, 14);
 		lblSecondNumber.setBounds(10, 61, 96, 14);
 		lblResult.setBounds(10, 86, 223, 14);
@@ -113,10 +115,9 @@ public class ViewClass implements ActionListener {
 	}
 
 	/**
-	 * Addind components to frame.
+	 * here we make the buttons visible
 	 * 
-	 * @param none
-	 * @return none
+	 *
 	 */
 	public void addComponentsToFrame() {
 		Calculator.getContentPane().add(lblFirstNumber);
@@ -133,7 +134,9 @@ public class ViewClass implements ActionListener {
 		Calculator.getContentPane().add(btnRound);
 		Calculator.getContentPane().add(btnFloor);
 	}
-
+/**
+ * here i make so my buttons can be touchable
+ */
 	public void addActionListeners() {
 		btnAdd.addActionListener(this);
 		btnSubtract.addActionListener(this);
@@ -150,9 +153,7 @@ public class ViewClass implements ActionListener {
 
 	/**
 	 *
-	 * get value from text field
-	 * 
-	 * @return firstNUmber - Number that is written in the textfield
+	 *here i connect my methods with buttons
 	 **/
 	public double firstValue() {
 		double firstNumber = 0.0;

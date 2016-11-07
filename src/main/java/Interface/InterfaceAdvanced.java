@@ -7,7 +7,7 @@ package Interface;
 
 public interface InterfaceAdvanced {
 	/**
-	 * Har listar vi upp alla metoder
+	 * here i list up the methods
 	 */
 	public double myABS(double value);
 	
