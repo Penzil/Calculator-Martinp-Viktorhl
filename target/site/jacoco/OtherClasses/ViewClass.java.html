@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="sv"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ViewClass.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Calculator-Martinp-Viktorhl</a> &gt; <a href="index.source.html" class="el_package">OtherClasses</a> &gt; <span class="el_source">ViewClass.java</span></div><h1>ViewClass.java</h1><pre class="source lang-java linenums">/**
+ * auther: Martin Palman
+ * auther: Viktor Hamnholm Lofgren
+ * version: 1.0
+ */
+package OtherClasses;
+
+/**
+ * here i import
+ */
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+
+public class ViewClass implements ActionListener {
+	private JFrame Calculator;
+	private JTextField txfFirstNumber;
+	private JTextField txfSecondNumber;
+<span class="fc" id="L23">	private BasicCalculator basicCalculator = new BasicCalculator();</span>
+<span class="fc" id="L24">	private AdvancedCalculator advancedCalculator = new AdvancedCalculator();</span>
+<span class="fc" id="L25">	private JLabel lblResult = new JLabel(&quot;Result:&quot;);</span>
+
+<span class="fc" id="L27">	private JLabel lblFirstNumber = new JLabel(&quot;first number&quot;);</span>
+<span class="fc" id="L28">	private JLabel lblSecondNumber = new JLabel(&quot;second number:&quot;);</span>
+
+<span class="fc" id="L30">	private double firstNumber = 0.0;</span>
+<span class="fc" id="L31">	private double secondNumber = 0.0;</span>
+	/**
+	 * 
+	 * Getters och Setters
+	 */
+	public double getFirstNumber() {
+<span class="nc" id="L37">		return firstNumber;</span>
+	}
+
+	public void setFirstNumber(double firstNumber) {
+<span class="nc" id="L41">		this.firstNumber = firstNumber;</span>
+<span class="nc" id="L42">	}</span>
+
+	public double getSecondNumber() {
+<span class="nc" id="L45">		return secondNumber;</span>
+	}
+
+	public void setSecondNumber(double secondNumber) {
+<span class="nc" id="L49">		this.secondNumber = secondNumber;</span>
+<span class="nc" id="L50">	}</span>
+	/**
+	 *here we give names to the buttons
+	 */
+<span class="fc" id="L54">	private JButton btnAdd = new JButton(&quot;+&quot;);</span>
+<span class="fc" id="L55">	private JButton btnSubtract = new JButton(&quot;-&quot;);</span>
+<span class="fc" id="L56">	private JButton btnMultiply = new JButton(&quot;*&quot;);</span>
+<span class="fc" id="L57">	private JButton btnDivide = new JButton(&quot;/&quot;);</span>
+<span class="fc" id="L58">	private JButton btnAbs = new JButton(&quot;ABS&quot;);</span>
+<span class="fc" id="L59">	private JButton btnPi = new JButton(&quot;PI&quot;);</span>
+<span class="fc" id="L60">	private JButton btnMin = new JButton(&quot;MIN&quot;);</span>
+<span class="fc" id="L61">	private JButton btnMax = new JButton(&quot;MAX&quot;);</span>
+<span class="fc" id="L62">	private JButton btnRound = new JButton(&quot;ROUND&quot;);</span>
+<span class="fc" id="L63">	private JButton btnFloor = new JButton(&quot;FLOOR&quot;);</span>
+
+	/**
+	 * Create the application.
+	 */
+<span class="fc" id="L68">	public ViewClass() {</span>
+<span class="fc" id="L69">		createAndShowGUI();</span>
+<span class="fc" id="L70">		addComponentsToFrame();</span>
+<span class="fc" id="L71">		addActionListeners();</span>
+<span class="fc" id="L72">	}</span>
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void createAndShowGUI() {
+<span class="fc" id="L78">		Calculator = new JFrame();</span>
+<span class="fc" id="L79">		Calculator.setBackground(new Color(255, 255, 204));</span>
+<span class="fc" id="L80">		Calculator.getContentPane().setBackground(new Color(95, 158, 160));</span>
+
+<span class="fc" id="L82">		Calculator.setTitle(&quot;Calculator&quot;);</span>
+<span class="fc" id="L83">		Calculator.setBounds(100, 100, 306, 294);</span>
+<span class="fc" id="L84">		Calculator.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L85">		Calculator.getContentPane().setLayout(null);</span>
+
+<span class="fc" id="L87">		txfFirstNumber = new JTextField();</span>
+<span class="fc" id="L88">		txfFirstNumber.setBounds(116, 27, 108, 20);</span>
+<span class="fc" id="L89">		Calculator.getContentPane().add(txfFirstNumber);</span>
+<span class="fc" id="L90">		txfFirstNumber.setColumns(10);</span>
+
+<span class="fc" id="L92">		txfSecondNumber = new JTextField();</span>
+<span class="fc" id="L93">		txfSecondNumber.setBounds(116, 58, 108, 20);</span>
+<span class="fc" id="L94">		Calculator.getContentPane().add(txfSecondNumber);</span>
+<span class="fc" id="L95">		txfSecondNumber.setColumns(10);</span>
+/**
+ * here we dicide where all the buttons are in the Calculator window
+ */
+<span class="fc" id="L99">		lblFirstNumber.setBounds(10, 30, 96, 14);</span>
+<span class="fc" id="L100">		lblSecondNumber.setBounds(10, 61, 96, 14);</span>
+<span class="fc" id="L101">		lblResult.setBounds(10, 86, 223, 14);</span>
+
+<span class="fc" id="L103">		btnAdd.setBounds(10, 139, 47, 23);</span>
+<span class="fc" id="L104">		btnSubtract.setBounds(67, 139, 48, 23);</span>
+<span class="fc" id="L105">		btnMultiply.setBounds(125, 139, 47, 23);</span>
+<span class="fc" id="L106">		btnDivide.setBounds(182, 139, 37, 23);</span>
+
+<span class="fc" id="L108">		btnAbs.setBounds(10, 175, 66, 23);</span>
+<span class="fc" id="L109">		btnPi.setBounds(88, 175, 47, 23);</span>
+<span class="fc" id="L110">		btnMin.setBounds(147, 175, 61, 23);</span>
+<span class="fc" id="L111">		btnMax.setBounds(182, 211, 61, 23);</span>
+<span class="fc" id="L112">		btnRound.setBounds(95, 211, 77, 23);</span>
+<span class="fc" id="L113">		btnFloor.setBounds(10, 211, 77, 23);</span>
+<span class="fc" id="L114">		Calculator.setVisible(true);</span>
+<span class="fc" id="L115">	}</span>
+
+	/**
+	 * here we make the buttons visible
+	 * 
+	 *
+	 */
+	public void addComponentsToFrame() {
+<span class="fc" id="L123">		Calculator.getContentPane().add(lblFirstNumber);</span>
+<span class="fc" id="L124">		Calculator.getContentPane().add(lblSecondNumber);</span>
+<span class="fc" id="L125">		Calculator.getContentPane().add(lblResult);</span>
+<span class="fc" id="L126">		Calculator.getContentPane().add(btnAdd);</span>
+<span class="fc" id="L127">		Calculator.getContentPane().add(btnSubtract);</span>
+<span class="fc" id="L128">		Calculator.getContentPane().add(btnMultiply);</span>
+<span class="fc" id="L129">		Calculator.getContentPane().add(btnDivide);</span>
+<span class="fc" id="L130">		Calculator.getContentPane().add(btnAbs);</span>
+<span class="fc" id="L131">		Calculator.getContentPane().add(btnPi);</span>
+<span class="fc" id="L132">		Calculator.getContentPane().add(btnMin);</span>
+<span class="fc" id="L133">		Calculator.getContentPane().add(btnMax);</span>
+<span class="fc" id="L134">		Calculator.getContentPane().add(btnRound);</span>
+<span class="fc" id="L135">		Calculator.getContentPane().add(btnFloor);</span>
+<span class="fc" id="L136">	}</span>
+/**
+ * here i make so my buttons can be touchable
+ */
+	public void addActionListeners() {
+<span class="fc" id="L141">		btnAdd.addActionListener(this);</span>
+<span class="fc" id="L142">		btnSubtract.addActionListener(this);</span>
+<span class="fc" id="L143">		btnMultiply.addActionListener(this);</span>
+<span class="fc" id="L144">		btnDivide.addActionListener(this);</span>
+<span class="fc" id="L145">		btnAbs.addActionListener(this);</span>
+<span class="fc" id="L146">		btnPi.addActionListener(this);</span>
+<span class="fc" id="L147">		btnMin.addActionListener(this);</span>
+<span class="fc" id="L148">		btnMax.addActionListener(this);</span>
+<span class="fc" id="L149">		btnRound.addActionListener(this);</span>
+<span class="fc" id="L150">		btnFloor.addActionListener(this);</span>
+
+<span class="fc" id="L152">	}</span>
+
+	/**
+	 *
+	 *here i connect my methods with buttons
+	 **/
+	public double firstValue() {
+<span class="nc" id="L159">		double firstNumber = 0.0;</span>
+<span class="nc" id="L160">		firstNumber = Double.valueOf(txfFirstNumber.getText());</span>
+<span class="nc" id="L161">		return firstNumber;</span>
+	}
+
+	public double secondValue() {
+<span class="nc" id="L165">		double secondNumber = 0.0;</span>
+<span class="nc" id="L166">		secondNumber = Double.valueOf(txfSecondNumber.getText());</span>
+<span class="nc" id="L167">		return secondNumber;</span>
+	}
+
+	public void actionPerformed(ActionEvent e) {
+<span class="nc bnc" id="L171" title="All 2 branches missed.">		if (e.getSource() == btnAdd) {</span>
+<span class="nc" id="L172">			double result = basicCalculator.add(firstValue(), secondValue());</span>
+<span class="nc" id="L173">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+
+<span class="nc bnc" id="L176" title="All 2 branches missed.">		if (e.getSource() == btnSubtract) {</span>
+<span class="nc" id="L177">			double result = basicCalculator.subtract(firstValue(), secondValue());</span>
+<span class="nc" id="L178">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+
+<span class="nc bnc" id="L181" title="All 2 branches missed.">		if (e.getSource() == btnMultiply) {</span>
+<span class="nc" id="L182">			double result = basicCalculator.multiply(firstValue(), secondValue());</span>
+<span class="nc" id="L183">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+
+<span class="nc bnc" id="L186" title="All 2 branches missed.">		if (e.getSource() == btnDivide) {</span>
+<span class="nc" id="L187">			double result = basicCalculator.divide(firstValue(), secondValue());</span>
+<span class="nc" id="L188">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+
+<span class="nc bnc" id="L191" title="All 2 branches missed.">		if (e.getSource() == btnAbs) {</span>
+<span class="nc" id="L192">			double result = advancedCalculator.myABS(firstValue());</span>
+<span class="nc" id="L193">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+		
+<span class="nc bnc" id="L196" title="All 2 branches missed.">		if (e.getSource() == btnPi) {</span>
+<span class="nc" id="L197">			double result = advancedCalculator.myPI();</span>
+<span class="nc" id="L198">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+		
+<span class="nc bnc" id="L201" title="All 2 branches missed.">		if (e.getSource() == btnMin) {</span>
+<span class="nc" id="L202">			double result = advancedCalculator.myMIN(firstValue(), secondValue());</span>
+<span class="nc" id="L203">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+		
+<span class="nc bnc" id="L206" title="All 2 branches missed.">		if (e.getSource() == btnMax) {</span>
+<span class="nc" id="L207">			double result = advancedCalculator.myMAX(firstValue(), secondValue());</span>
+<span class="nc" id="L208">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+		
+<span class="nc bnc" id="L211" title="All 2 branches missed.">		if (e.getSource() == btnRound) {</span>
+<span class="nc" id="L212">			double result = advancedCalculator.myROUND(firstValue());</span>
+<span class="nc" id="L213">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+		
+<span class="nc bnc" id="L216" title="All 2 branches missed.">		if (e.getSource() == btnFloor) {</span>
+<span class="nc" id="L217">			double result = advancedCalculator.myFLOOR(firstValue());</span>
+<span class="nc" id="L218">			lblResult.setText(&quot;Result: &quot; + result);</span>
+		}
+<span class="nc" id="L220">}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
